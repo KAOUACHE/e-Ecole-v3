@@ -4,6 +4,8 @@
     <head>
        
         <Title> Inscription : Confirmation </Title>
+        <meta charset="UTF-8"/>
+        
         <link rel="stylesheet" type="text/css" href="http://localhost/e-Ecole-v3/assets/css/style.css"> 
         
     </head>

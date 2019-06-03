@@ -4,6 +4,8 @@
     <head>
        
         <Title> Inscription utilisateur </Title>
+        <meta charset="UTF-8"/>
+         
         <link rel="stylesheet" type="text/css" href="http://localhost/e-Ecole-v3/assets/css/style.css"> 
         
     </head>
@@ -12,7 +14,7 @@
        
         <h3>Inscription utilisateur </h3>
         
-        <p> Vous devez renseigner tous les champs ! Lors de l'inscription d'un administrateur ou un enseignant, remplissez la case correspondante à la date de naissance par la chaine de caractères "XXXXXXXX". </p>
+        <p> Vous devez renseigner tous les champs ! Le champ Nom doit être rempli en majuscule. Lors de l'inscription d'un administrateur ou un enseignant, remplissez la case correspondante à la date de naissance par la chaine de caractères "XXXXXXXX". Le login est le nom de l'utilsateur en miniscule.</p>
 
         <form action="" method="post">
        

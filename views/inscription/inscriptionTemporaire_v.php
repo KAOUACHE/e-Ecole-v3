@@ -14,7 +14,7 @@
        
         <h3> Inscription temporaire </h3>
         
-        <p>L'utilisateur <?php echo $nom." ".$prenom ?> a été inscrit(e) temporairement.</p>
+        <p>L'utilisateur <?php echo $nom." ".$prenom ?> a été inscrit(e) temporairement. Une demande de confirmation de l'inscription a été envoyée à sa boîte email.</p>
         
         <p> <a href='http://localhost/e-Ecole-v3/index.php/utilisateur_c/afficher'> Portail administrateur </a> </p>
         

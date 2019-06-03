@@ -13,10 +13,16 @@
        
         <h3> Mise à jour des utilisateurs : resultat </h3>
         
-        <p> L'utilisateur(e) <?php echo $_POST['nom']." ".$_POST['prenom'] ?> n'exite pas !.</p>
+        <p> L'utilisateur(e) <?php echo $_POST['nom']." ".$_POST['prenom'] ?> n'exite pas !</p>
         
         
-        <p> <a href='http://localhost/e-ecole-v3/index.php/utilisateur_c/miseAJourUtilisateur'> Mettre à jour des utilisateurs </a></p>
+        <p> 
+          
+           <a href='http://localhost/e-ecole-v3/index.php/utilisateur_c/chercherUtilisateurs'>Recherche un (ou des) utilisateur(s)</a>
+           
+        </p>
+        
+        
         <p> <a href='http://localhost/e-Ecole-v3/index.php/utilisateur_c/afficher'> Portail administrateur </a> </p>
         
     </body>

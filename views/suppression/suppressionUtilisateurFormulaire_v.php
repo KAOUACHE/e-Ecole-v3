@@ -12,19 +12,21 @@
        
         <h3> Suppression des utilisateurs </h3>
         
-        <p> En respectant la casse, vous devez spécifier le nom et le prénom de l'utilisateur à supprimer.</p>
+        <p> Le nom et le prénom de l'utilisateur à supprimer sont pré-remplis.</p>
        
-        <form action="" method="post">
+        <form action="http://localhost/e-ecole-v3/index.php/utilisateur_c/supprimerUtilisateur" method="post">
         
             <label for="nom">Nom : </label>
-            <input type="text" name="nom" value=""/>
+            <input type="text" name="nom" value="<?php echo $nom ?>"/>
         
             <label for="prenom">Prenom : </label>
-            <input type="text" name="prenom" value=""/>
+            <input type="text" name="prenom" value="<?php echo $prenom ?>"/>
     
             <button type="submit">Supprimer utilisateur</button>
         
-        </form> 
+        </form>
+        
+        <p> <a href='http://localhost/e-ecole-v3/index.php/utilisateur_c/chercherUtilisateurs'> Chercher des utilisateurs </a></p>  
     
         <p> <a href='http://localhost/e-Ecole-v3/index.php/utilisateur_c/afficher'> Portail administrateur </a> </p>
   

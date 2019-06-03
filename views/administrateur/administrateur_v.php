@@ -24,17 +24,6 @@
            
         </p>
         
-        <p> 
-          
-           <a href='http://localhost/e-ecole-v3/index.php/utilisateur_c/miseAJourUtilisateur'>Mettre à jour un utilisateur </a> 
-           
-        </p>
-        
-        <p> 
-           <a href='http://localhost/e-ecole-v3/index.php/utilisateur_c/supprimerUtilisateur'>Supprimer un utilisateur </a> 
-           
-        </p>
-        
         
         <br/>
         <br/>

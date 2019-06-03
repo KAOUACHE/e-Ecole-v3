@@ -14,7 +14,7 @@
         <h1> Authentification </h1>
         
         <?php echo "<p> Vous devez spécifier correctement votre login et votre mot de passe !</p>"; ?>
-        <?php echo "<p> Votre login est votre nom en majuscule.</p>"; ?>
+        <?php echo "<p> Votre login est votre nom en miniscule.</p>"; ?>
        
        
         <form action="" method="post">

@@ -12,28 +12,28 @@
        
         <h3> Mettre à jour des utilisateurs </h3>
         
-        <p> Vous devez spécifier le nom et le prénom de l'utilisateur à mettre à jour en respectant la casse.</p>
+        <p> Le nom et le prénom de l'utilisateur à mettre à jour sont pré-remplis.</p>
         <p> Vous pouvez mettre à jour l'email, le login et le mot de passe.</p>
        
-        <form action="" method="post">
+        <form action="http://localhost/e-ecole-v3/index.php/utilisateur_c/miseAJourUtilisateur" method="post">
         
             <label for="nom">Nom : </label>
-            <input type="text" name="nom" value=""/>
+            <input type="text" name="nom" value="<?php echo $nom ?>"/>
         
             <label for="prenom">Prenom : </label>
-            <input type="text" name="prenom" value=""/>
+            <input type="text" name="prenom" value="<?php echo $prenom ?>"/>
             
             <br/>
             <br/>
         
             <label for="login">Login : </label>
-            <input type="text" name="login" value=""/>
+            <input type="text" name="login" value="<?php echo $login ?>" />
     
             <label for="motdepasse">Mot de passe : </label>
-            <input type="password" name="motdepasse" value=""/>
+            <input type="password" name="motdepasse" value="<?php echo $motdepasse ?>"/>
         
             <label for="email">Email : </label>
-            <input type="text" name="email" value=""/>
+            <input type="text" name="email" value="<?php echo $email ?>"/>
     
             <button type="submit">Mise à jour</button>
         

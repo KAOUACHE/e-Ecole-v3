@@ -15,7 +15,7 @@
         
         <p>
            
-           Votre inscription est validée. Votre login est votre nom en majuscule et votre mot de passe est <?php echo $uti_motdepasse ; ?>. 
+           Votre inscription est validée. Votre login est votre nom en miniscule et votre mot de passe est <?php echo $uti_motdepasse ; ?>. 
             
         </p>
             
