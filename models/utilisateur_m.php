@@ -27,6 +27,7 @@ class Utilisateur_m extends CI_Model {
     } 
     
     
+    // La fonction selectionnerUtilisateurs($utilisateurs) sélectionne des informations sur les utilisateurs depuis la table 'utilisateur' en fonction des options de recherche.
     public function selectionnerUtilisateurs($utilisateurs){
         
         // Sélection des champs
@@ -41,6 +42,7 @@ class Utilisateur_m extends CI_Model {
     }
     
     
+     // La fonction selectionnerUtilisateur() retourne un tableau des objets depuis la table 'utilisateur' où chaque objet correspond à un nom et un prenom.
     public function selectionnerUtilisateur(){
         
         $this->db->select('uti_nom');
@@ -53,6 +55,7 @@ class Utilisateur_m extends CI_Model {
     }
     
     
+    // La fonction selectionnerLoginMotDePasse() retourne un tableau des objets depuis la table 'utilisateur' où chaque objet correspond à un login et un mot de passe.
     public function selectionnerLoginMotDePasse(){
         
         $this->db->select('uti_login');

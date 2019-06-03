@@ -10,7 +10,7 @@ class LoginInfo_m extends CI_Model {
         $this->load->database();    
     }
     
-    
+    // La fonction miseAjourMotDePasse($email, $motDePasse) permet de mettre à jour le mot de passe qui correspond à l'émail $email. 
     public function miseAjourMotDePasse($email, $motDePasse){
          
         $this->db->set('uti_motdepasse', $motDePasse);
