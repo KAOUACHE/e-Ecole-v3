@@ -112,7 +112,7 @@ class Utilisateur_c extends CI_Controller {
            
     
     // La fonction afficher() affiche la page de connexion si l'utilisateur n'est pas connecté, sinon, elle affiche les portails administrateur, enseignant, étudiant et le volet qui permet la déconnexion. 
-    public function afficher(){ 
+    public function connecterUtilisateur(){ 
     
         if(!$this->connexionUtilisateur()){
             
@@ -120,21 +120,48 @@ class Utilisateur_c extends CI_Controller {
             
         }else{
             
-            $this->load->view('administrateur/administrateur_v');
-            $this->load->view('enseignant/enseignant_v');
-            $this->load->view('etudiant/etudiant_v'); 
-            
+            $this->load->view('accueil/accueil_v');
+            $this->load->view('utilisateur/utilisateur_v');  
             $this->load->view('deconnexion/deconnexion_v');
             
         }
         
     }
     
-    // La fonction afficherAccueil() affiche la page d'accueil 'bienvenue_v' dans le cas d'une déconnexion de l'utilisateur. 
+    
+    // La fonction ... 
+    public function connecterAdministrateur(){
+        
+        $this->load->view('accueil/accueil_v');
+        $this->load->view('administrateur/administrateur_v');
+        $this->load->view('deconnexion/deconnexion_v');
+        
+    }
+    
+    // La fonction ... 
+    public function connecterEnseignant(){
+        
+        $this->load->view('accueil/accueil_v');
+        $this->load->view('enseignant/enseignant_v');
+        $this->load->view('deconnexion/deconnexion_v');
+        
+    }
+    
+    // La fonction ... 
+    public function connecterEtudiant(){
+        
+        $this->load->view('accueil/accueil_v');
+        $this->load->view('etudiant/etudiant_v');
+        $this->load->view('deconnexion/deconnexion_v');
+        
+    }
+    
+    // La fonction afficherAccueil() affiche la page d'accueil 'accueil_v' dans le cas d'une déconnexion de l'utilisateur. 
     public static function afficherAccueil(){
         
         Utilisateur_c::deconnexionUtilisateur();    
-        $this->load->view('accueil/bienvenue_v');
+        $this->load->view('accueil/accueil_v');
+        $this->load->view('connexion/connexion_v');
        
     }
     
@@ -175,6 +202,7 @@ class Utilisateur_c extends CI_Controller {
         
         if(empty($_POST['nom']) || empty($_POST['prenom']) || empty($_POST['datenaissance']) || empty($_POST['email']) || empty($_POST['role']) || empty($_POST['login'])){
             
+            $this->load->view('accueil/accueil_v');
             $this->load->view('inscription/inscriptionFormulaire_v'); 
             
         }else{
@@ -188,6 +216,7 @@ class Utilisateur_c extends CI_Controller {
                 
                     //Notification d'inscription temporaire 
                     $identiteUtilisateur = array('nom' => $_POST['nom'], 'prenom' => $_POST['prenom']);
+                    $this->load->view('accueil/accueil_v');
                     $this->load->view('inscription/inscriptionTemporaire_v', $identiteUtilisateur);
                 
                     //Peuplement de la table 'validation' avec le statut 'non-valide'
@@ -218,6 +247,7 @@ class Utilisateur_c extends CI_Controller {
                     
             }else{
                 
+                $this->load->view('accueil/accueil_v');
                 $this->load->view('inscription/inscriptionExistenceUtilisateur_v');
                 
             }
@@ -247,6 +277,7 @@ class Utilisateur_c extends CI_Controller {
         
         if($i >= sizeof($emailCode)){
             
+            $this->load->view('accueil/accueil_v');
             $this->load->view('inscription/inscriptionNonValide_v'); 
         
         }else{
@@ -278,6 +309,7 @@ class Utilisateur_c extends CI_Controller {
                     
                 }else{
                     
+                    $this->load->view('accueil/accueil_v');
                     $this->load->view('inscription/inscriptionNonValide_v');
                 } 
             }             
@@ -292,6 +324,7 @@ class Utilisateur_c extends CI_Controller {
         
         if(empty($_POST['nom']) && empty($_POST['prenom']) && empty($_POST['email']) && empty($_POST['role'])){
             
+            $this->load->view('accueil/accueil_v');
             $this->load->view('rechercher/rechercherUtilisateurFormulaire_v'); 
             
         }else{
@@ -328,6 +361,7 @@ class Utilisateur_c extends CI_Controller {
             $utilisateursInfo = array();
             $utilisateursInfo['usersInfo'] = $this->utilisateur_m->selectionnerUtilisateurs($utilisateurs); 
             
+            $this->load->view('accueil/accueil_v');
             $this->load->view('rechercher/rechercherUtilisateurResultat_v', $utilisateursInfo);  
             
            
@@ -339,6 +373,8 @@ class Utilisateur_c extends CI_Controller {
     public function remplirFormulaireMiseAJourUtilisateur($nom, $prenom, $login, $motdepasse, $email){
          
         $utilisateur = array('login' => $login, 'motdepasse' => $motdepasse, 'email' => $email, 'nom' =>$nom, 'prenom' => $prenom);
+        
+        $this->load->view('accueil/accueil_v');
         $this->load->view('MiseAJour/MiseAJourUtilisateurFormulaire_v', $utilisateur);
         
     }
@@ -349,6 +385,7 @@ class Utilisateur_c extends CI_Controller {
         
         if(empty($_POST['nom']) || empty($_POST['prenom'])){
             
+            $this->load->view('accueil/accueil_v');
             $this->load->view('MiseAJour/MiseAJourUtilisateurFormulaire_v');
             
         }else{
@@ -357,6 +394,7 @@ class Utilisateur_c extends CI_Controller {
                 
                 if(empty($_POST['email']) && empty($_POST['login']) && empty($_POST['motdepasse'])){ 
                     
+                    $this->load->view('accueil/accueil_v');
                     $this->load->view('MiseAJour/miseAJourUtilisateurFormulaire_v');
                 
                 }else{
@@ -369,6 +407,7 @@ class Utilisateur_c extends CI_Controller {
                     
                     if($miseajour){
                     
+                        $this->load->view('accueil/accueil_v');
                         $this->load->view('miseAJour/miseAJourUtilisateurResultat_v');
                     }
                     
@@ -376,6 +415,7 @@ class Utilisateur_c extends CI_Controller {
                        
             }else{
                 
+                $this->load->view('accueil/accueil_v');
                 $this->load->view('miseAJour/miseAJourNonExistenceUtilisateur_v');
             }
             
@@ -386,6 +426,8 @@ class Utilisateur_c extends CI_Controller {
     public function remplirFormulaireSuppressionUtilisateur($nom, $prenom){
         
         $utilisateur = array('nom' => $nom, 'prenom' => $prenom);
+        
+        $this->load->view('accueil/accueil_v');
         $this->load->view('suppression/suppressionUtilisateurFormulaire_v', $utilisateur);
         
     }
@@ -394,6 +436,7 @@ class Utilisateur_c extends CI_Controller {
         
         if(empty($_POST['nom']) || empty($_POST['prenom'])){
             
+            $this->load->view('accueil/accueil_v');
             $this->load->view('suppression/suppressionUtilisateurFormulaire_v');
             
         }else{
@@ -406,12 +449,14 @@ class Utilisateur_c extends CI_Controller {
             
                 if($suppression){
                     
+                    $this->load->view('accueil/accueil_v');
                     $this->load->view('suppression/suppressionUtilisateurResultat_v');
                 
                 }
                 
             }else{
                 
+                $this->load->view('accueil/accueil_v');
                 $this->load->view('suppression/suppressionNonExistenceUtilisateur_v');
                 
             }
@@ -419,21 +464,7 @@ class Utilisateur_c extends CI_Controller {
         }
         
     }
-   
-    /*
-     public static function test(){
-        
-        if(Utilisateur_c::connexionUtilisateur()){
-            
-            echo 1;
-        }else{
-            
-            echo 0;
-        }
-    } 
-    
-    */
-    
+
 }
     
 ?>
