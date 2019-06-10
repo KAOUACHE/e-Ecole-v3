@@ -14,7 +14,7 @@
        
         <h3>Inscription utilisateur </h3>
         
-        <p> Vous devez renseigner tous les champs ! Le champ Nom doit être rempli en majuscule. Lors de l'inscription d'un administrateur ou un enseignant, remplissez la case correspondante à la date de naissance par la chaine de caractères "XXXXXXXX". Le login est le nom de l'utilsateur en miniscule.</p>
+        <p> Vous devez renseigner tous les champs ! Le champ Nom doit être rempli en majuscule. Lors de l'inscription d'un administrateur ou un enseignant, remplissez la case correspondante à la date de naissance par la chaine de caractères "xxxxxxxx". Le login est le nom de l'utilsateur en miniscule.</p>
 
         <form action="" method="post">
        
@@ -53,7 +53,7 @@
         
     </form> 
     
-    <p> <a href='http://localhost/e-Ecole-v3/index.php/utilisateur_c/afficher'> Portail administrateur </a> </p>
+    <p> <a href='http://localhost/e-Ecole-v3/index.php/utilisateur_c/connecterAdministrateur'> Entrer au portail administrateur </a> </p>
         
     </body>
    

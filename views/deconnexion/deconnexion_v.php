@@ -4,7 +4,7 @@
     <head>
        
         <Title> Deconnexion </Title>
-        <link rel="stylesheet" type="text/css" href="http://localhost/e-Ecole-v3/assets/css/style.css"> 
+        <!--<link rel="stylesheet" type="text/css" href="http://localhost/e-Ecole-v3/assets/css/deconnexion_v.css"> -->
         
     </head>
     

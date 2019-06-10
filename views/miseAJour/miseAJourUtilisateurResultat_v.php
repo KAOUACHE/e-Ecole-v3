@@ -21,7 +21,12 @@
            <a href='http://localhost/e-ecole-v3/index.php/utilisateur_c/chercherUtilisateurs'>Recherche un (ou des) utilisateur(s)</a>
            
         </p>
-        <p> <a href='http://localhost/e-Ecole-v3/index.php/utilisateur_c/afficher'> Portail administrateur </a> </p>
+        
+        <p> 
+        
+          <a href='http://localhost/e-Ecole-v3/index.php/utilisateur_c/connecterAdministrateur'> Entrer au portail administrateur </a> 
+           
+        </p>
         
     </body>
    

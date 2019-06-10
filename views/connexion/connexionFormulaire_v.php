@@ -4,7 +4,7 @@
     <head>
        
         <Title> Authentification </Title>
-        <link rel="stylesheet" type="text/css" href="http://localhost/e-Ecole-v3/assets/css/style.css"> 
+        <link rel="stylesheet" type="text/css" href="http://localhost/e-Ecole-v3/assets/css/connexionFormulaire_v.css"> 
         
     </head>
     
@@ -13,19 +13,18 @@
        
         <h1> Authentification </h1>
         
-        <?php echo "<p> Vous devez spécifier correctement votre login et votre mot de passe !</p>"; ?>
-        <?php echo "<p> Votre login est votre nom en miniscule.</p>"; ?>
+        <p> Vous devez spécifier correctement votre login et votre mot de passe. Votre login est votre nom en miniscule.</p>
        
        
         <form action="" method="post">
            
-            <label for="login">Login : </label>
+            <label for="login">Login </label>
             <input type="text" name="login" value=""/>
             
             <br/>
             <br/>
     
-            <label for="motdepasse">Mot de passe : </label>
+            <label for="motdepasse">Mot de passe </label>
             <input type="password" name="motdepasse" value=""/>
             
             <br/>
